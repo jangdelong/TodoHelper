@@ -1,4 +1,4 @@
-TodoHelper-
+TodoHelper
 ===========
 
 node todohelper for windows
