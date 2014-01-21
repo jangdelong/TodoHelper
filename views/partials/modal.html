@@ -1,0 +1,29 @@
+<!-- 模态框 -->
+<div class="modal fade" id="editPanel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">查看事项</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="show-grid">
+                    <input type="text" id="txtTitle" class="form-control" placeholder="事项标题" disabled >
+                </div>
+                <div class="show-grid">
+                    <textarea id="txtContent" class="form-control" rows="3" placeholder="事项说明" disabled ></textarea>
+                </div>
+                <div class="show-grid">
+                    <input type="text" id="txtTime" class="form-control datepicker" placeholder="事项时间" disabled >
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" id="fat-btn" class="btn btn-primary" data-loading-text="正在保存...">保存</button>
+            </div>
+        </div> <!-- /.modal-content -->
+    </div> <!-- /.modal-dialog -->
+</div>
+<!-- /模态框 -->
