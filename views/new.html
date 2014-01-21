@@ -1,0 +1,34 @@
+<% include partials/header.html %>
+
+<!-- Nav -->
+<nav class="show-grid">
+    <a href="/" type="button" class="btn btn-default btn-lg btn-block">
+		<span class="glyphicon glyphicon-arrow-left"></span> 返回
+    </a>
+</nav>
+
+<!-- 添加事项表单 -->
+<form>
+    <div class="show-grid form-group">
+        <label class="control-label" for="txtTitle">事项标题</label>
+    	<input type="text" id="txtTitle" class="form-control" placeholder="添加事项标题" >
+    </div>
+
+    <div class="show-grid form-group">
+        <label class="control-label" for="txtContent">事项说明</label>
+    	<textarea id="txtContent" class="form-control" rows="3" placeholder="添加事项说明"></textarea>
+    </div>
+
+    <div class="show-grid form-group">
+        <label class="control-label" for="txtTime">事项时间</label>
+    	<input type="text" id="txtTime" class="form-control datepicker" placeholder="添加事项时间" >
+    </div>
+
+    <div class="show-grid">
+    	<a class="btn btn-primary" id="btnAdd" data-loading-text="正在添加...">添加</a>
+    	<a class="btn btn-default" id="btnCancel">取消</a>
+    </div>
+</form>
+<!-- /添加事项表单 -->
+
+<% include partials/footer.html %>
