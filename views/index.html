@@ -1,0 +1,24 @@
+<% include partials/header.html %>
+
+    <section class="show-grid">
+        <a href="/new" type="button" class="btn btn-default btn-lg btn-block">
+            <span class="glyphicon glyphicon-plus"></span> 添加待办事项
+        </a>
+    </section>
+    <section class="panel-group">
+
+        <!-- 待办 -->
+        <div class="panel panel-primary">
+            <% include partials/unfinished.html %>
+        </div>
+        <!-- /待办 -->
+
+        <!-- 已完成 -->
+        <div class="panel panel-primary">
+            <% include partials/finished.html %>
+        </div>
+        <!-- /已完成 -->
+
+    </section>
+<% include partials/modal.html %>
+<% include partials/footer.html %>
