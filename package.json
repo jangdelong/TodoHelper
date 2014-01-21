@@ -1,0 +1,21 @@
+{
+    "name": "Simple Todo",
+    "main": "http://localhost:3000/",
+    "webkit": {
+        "plugin": false
+    },
+    "window": {
+        "show": false,
+        "toolbar": false,
+        "width": 1000,
+        "height": 660,
+        "position": "center",
+        "min_width": 800,
+        "min_height": 400
+    },
+    "dependencies": {
+        "express": "3.4.7",
+        "ejs": "0.8.5",
+        "mongoose": "3.8.3"
+    }
+}
