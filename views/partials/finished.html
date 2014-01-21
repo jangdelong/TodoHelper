@@ -1,0 +1,54 @@
+<div class="panel-heading">
+    <h4 class="panel-title">
+        <span class="glyphicon glyphicon-align-justify"></span>
+        <a data-toggle="collapse" id="collapse_click_2" data-parent="#accordion" href="#collapseTwo">
+            已完成
+        </a>
+        &nbsp;
+        <span class="label label-success"><%= todos_finished.length %></span>
+        <span class="glyphicon glyphicon-chevron-up pull-right"></span>
+    </h4>
+</div>
+<div id="collapseTwo" class="panel-collapse collapse in">
+    <div class="panel-body">
+
+        <table class="table table-condensed" id="finished_table">
+            <thead>
+            <tr>
+                <th>事 项</th>
+                <th class="tab-r">状 态</th>
+                <th class="tab-r">操 作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <%
+            for (var i = 0; i < todos_finished.length; i++) {
+                var todo = todos_finished[i];
+            %>
+            <tr>
+                <!-- 事项 -->
+                <td>
+                    <span class="glyphicon glyphicon-time"></span>
+                    <span class="txtPostTime" data-post_time="<%= todo.post_date %>"></span>
+
+                    <a data-toggle="modal" data-target="#editPanel" class="txtTitle ml-10 ev_target1">
+                        <%= todo.title %>
+                    </a>
+                    <input type="hidden" class="hidden txtContent" value="<%= todo.content %>" >
+                    <input type="hidden" class="hidden _id" value="<%= todo._id %>" >
+                    <input type="hidden" class="hidden flagFinished" value="<%= todo.finished %>" >
+                </td>
+                <!-- 状态 -->
+                <td><span class="glyphicon glyphicon-ok"></span></td>
+                <!-- 操作 -->
+                <td>
+                    <a class="glyphicon glyphicon-star-empty mr-10" href="/<%- todo._id %>/finish?status=no"></a>
+                    <a class="glyphicon glyphicon-edit ev_target2 mr-10" data-toggle="modal" data-target="#editPanel"></a>
+                    <a class="glyphicon glyphicon-trash" href="/<%- todo._id %>/delete"></a>
+                </td>
+            </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
